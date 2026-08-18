@@ -1,0 +1,125 @@
+// ==========================================
+// Class Human
+// ทำหน้าที่เป็นแม่แบบ (Class) สำหรับสร้าง Object
+// ==========================================
+
+class Human {
+
+    // ขั้นตอนที่ 3 : สร้าง Attribute จำนวน 3 ตัว
+    String name;       // เก็บชื่อ
+    int age;           // เก็บอายุ
+    double weight;     // เก็บน้ำหนัก
+
+
+    // ขั้นตอนที่ 4 : สร้าง Constructor
+    // Constructor ต้องมีชื่อเดียวกับ Class
+    // รับ Parameter 3 ค่า ได้แก่ name, age และ weight
+    Human(String name, int age, double weight) {
+
+        // ขั้นตอนที่ 5 : ใช้ this กำหนดค่าให้ Attribute
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
+
+    // ขั้นตอนที่ 6 : สร้าง Method eat()
+    // แสดงชื่อ Object ตามด้วยข้อความ is eating
+    void eat() {
+        System.out.println(this.name + " is eating");
+    }
+
+
+    // ขั้นตอนที่ 7 : สร้าง Method drink()
+    // แสดงชื่อ Object ตามด้วยข้อความ is drinking
+    void drink() {
+        System.out.println(this.name + " is drinking");
+    }
+}
+
+// ==========================================
+// Main.java
+// โปรแกรมหลักสำหรับสร้างและใช้งาน Object
+// ==========================================
+
+public class Main {
+
+    // ขั้นตอนที่ 1 : สร้าง Method main()
+    public static void main(String[] args) {
+
+
+        // ==========================================
+        // ขั้นตอนที่ 8 : สร้าง Object human1
+        // ใช้ข้อมูลของบุคคลคนที่ 1
+        // ชื่อ: Poom
+        // อายุ: 18
+        // น้ำหนัก: 65.5
+        // ==========================================
+
+        Human human1 = new Human("Poom", 18, 65.5);
+
+
+        // ==========================================
+        // ขั้นตอนที่ 9 : สร้าง Object human2
+        // ใช้ข้อมูลของบุคคลคนที่ 2
+        // ชื่อ: Beam
+        // อายุ: 20
+        // น้ำหนัก: 70.0
+        // ==========================================
+
+        Human human2 = new Human("Beam", 20, 70.0);
+
+
+        // ==========================================
+        // ขั้นตอนที่ 10 : แสดงข้อมูลของ human1
+        // ใช้ Dot Operator (.)
+        // ==========================================
+
+        System.out.println("ข้อมูลของ Human 1");
+        System.out.println("ชื่อ: " + human1.name);
+        System.out.println("อายุ: " + human1.age);
+        System.out.println("น้ำหนัก: " + human1.weight);
+
+
+        // ==========================================
+        // ขั้นตอนที่ 11 : แสดงข้อมูลของ human2
+        // ใช้ Dot Operator (.)
+        // ==========================================
+
+        System.out.println();
+        System.out.println("ข้อมูลของ Human 2");
+        System.out.println("ชื่อ: " + human2.name);
+        System.out.println("อายุ: " + human2.age);
+        System.out.println("น้ำหนัก: " + human2.weight);
+
+
+        // ==========================================
+        // ขั้นตอนที่ 12 : เรียกใช้ Method eat()
+        // ให้ Object ทั้ง 2 ตัวเรียกใช้ Method
+        // ==========================================
+
+        System.out.println();
+        System.out.println("การกิน");
+
+        human1.eat();
+        human2.eat();
+
+
+        // ==========================================
+        // ขั้นตอนที่ 13 : เรียกใช้ Method drink()
+        // ให้ Object ทั้ง 2 ตัวเรียกใช้ Method
+        // ==========================================
+
+        System.out.println();
+        System.out.println("การดื่ม");
+
+        human1.drink();
+        human2.drink();
+
+
+        // ==========================================
+        // ขั้นตอนที่ 14 : Run และตรวจสอบโปรแกรม
+        // ==========================================
+
+    }
+}
